@@ -1,55 +1,118 @@
-h6, 
-.h6 {
-  font-weight: 600;
-}
 
-span {
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.progress-percent {
-  margin-right: 10px;
-  font-size: 16px;
-}
-
-.revenue {
-  .progress-section {
-    position: relative;
-    top: -14px;
-
-    .revenue-increase-percent {
-      font-size: 18px;
-      color: #32B765;
+:host ::ng-deep {
+  * {
+    font-family: sans-serif;
+  }
+  
+  .container {
+    .content {
+        padding: 20px 60px;
+    }
+  
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 60px;
+  
+      color: #ffffff;
+      background-color: #5bb4ba;
+  
+      .avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+    
+      .position {
+        font-size: 13px;
+        opacity: 0.85;
+      }
+    
+      .divider {
+        width: 2.5px;
+        height: 60px;
+        margin-right: 10px;
+        background-color: rgba(255, 255, 255, .7);
+      }
+    
+      .description {
+        font-style: italic;
+      }
+    }
+  }
+  
+  .card {
+    border: 0;
+    box-shadow: -8px 0px 50px 0 rgba(25, 42, 70, 0.11);
+    border-radius: 1.25rem;
+  }
+  
+  .progress {
+    height: 13px;
+    border-radius: 15px;
+    width: 100%;
+    background-color: #ffffff;
+  
+    .progress-bar {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
     }
   }
 
-  .last-month {
-    position: absolute;
-    right: 0px;
-    top: -7px;
-
-    width: 2.5px;
-    height: 45px;
-    background-color: #4C72C1;
+  h6, 
+  .h6 {
+    font-weight: 600;
   }
-}
 
-.revenue-title-section {
   span {
-    font-size: 10px;
-    color: #878787;
+    font-size: 12px;
+    font-weight: 600;
   }
-}
 
-.status-dot {
-  width: 5px;
-  height: 5px;
-  margin: 5px;
-  border-radius: 50%;
-}
+  .progress-percent {
+    margin-right: 10px;
+    font-size: 16px;
+  }
 
-.pie-chart {
-  margin-top: 40px;
-  margin-bottom: 80px;
+  .revenue {
+    .progress-section {
+      position: relative;
+      top: -14px;
+
+      .revenue-increase-percent {
+        font-size: 18px;
+        color: #32B765;
+      }
+    }
+
+    .last-month {
+      position: absolute;
+      right: 0px;
+      top: -7px;
+
+      width: 2.5px;
+      height: 45px;
+      background-color: #4C72C1;
+    }
+  }
+
+  .revenue-title-section {
+    span {
+      font-size: 10px;
+      color: #878787;
+    }
+  }
+
+  .status-dot {
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    border-radius: 50%;
+  }
+
+  .pie-chart {
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
 }

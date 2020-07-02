@@ -1,0 +1,61 @@
+:host ::ng-deep {
+    * {
+        font-family: sans-serif;
+    }
+    
+    .container {
+        .content {
+            padding: 20px 60px;
+        }
+    
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 60px;
+        
+            color: #ffffff;
+            background-color: #5bb4ba;
+        
+            .avatar {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+        
+            .position {
+                font-size: 13px;
+                opacity: 0.85;
+            }
+        
+            .divider {
+                width: 2.5px;
+                height: 60px;
+                margin-right: 10px;
+                background-color: rgba(255, 255, 255, .7);
+            }
+        
+            .description {
+                font-style: italic;
+            }
+        }
+    }
+    
+    .card {
+        border: 0;
+        box-shadow: -8px 0px 50px 0 rgba(25, 42, 70, 0.11);
+        border-radius: 1.25rem;
+    }
+    
+    .progress {
+        height: 13px;
+        border-radius: 15px;
+        width: 100%;
+        background-color: #ffffff;
+    
+        .progress-bar {
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+    }
+}
