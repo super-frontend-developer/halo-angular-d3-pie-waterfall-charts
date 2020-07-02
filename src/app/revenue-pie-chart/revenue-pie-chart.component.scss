@@ -1,0 +1,55 @@
+h6, 
+.h6 {
+  font-weight: 600;
+}
+
+span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.progress-percent {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.revenue {
+  .progress-section {
+    position: relative;
+    top: -14px;
+
+    .revenue-increase-percent {
+      font-size: 18px;
+      color: #32B765;
+    }
+  }
+
+  .last-month {
+    position: absolute;
+    right: 0px;
+    top: -7px;
+
+    width: 2.5px;
+    height: 45px;
+    background-color: #4C72C1;
+  }
+}
+
+.revenue-title-section {
+  span {
+    font-size: 10px;
+    color: #878787;
+  }
+}
+
+.status-dot {
+  width: 5px;
+  height: 5px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.pie-chart {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
