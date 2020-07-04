@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RevenuePieChartComponent } from './revenue-pie-chart/revenue-pie-chart.component';
 import { RevenueWaterfallChartComponent } from './revenue-waterfall-chart/revenue-waterfall-chart.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RevenuePieChartComponent,
-    RevenueWaterfallChartComponent
+    RevenueWaterfallChartComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
