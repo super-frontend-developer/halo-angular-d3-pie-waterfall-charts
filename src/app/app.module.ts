@@ -7,6 +7,7 @@ import { RevenuePieChartComponent } from './revenue-pie-chart/revenue-pie-chart.
 import { RevenueWaterfallChartComponent } from './revenue-waterfall-chart/revenue-waterfall-chart.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { WinnersComponent } from './winners/winners.component';
+import { NewProductsComponent } from './new-products/new-products.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { WinnersComponent } from './winners/winners.component';
     RevenuePieChartComponent,
     RevenueWaterfallChartComponent,
     CategoriesComponent,
-    WinnersComponent
+    WinnersComponent,
+    NewProductsComponent
   ],
   imports: [
     BrowserModule,

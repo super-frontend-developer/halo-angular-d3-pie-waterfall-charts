@@ -4,6 +4,7 @@ import { RevenuePieChartComponent } from './revenue-pie-chart/revenue-pie-chart.
 import { RevenueWaterfallChartComponent } from './revenue-waterfall-chart/revenue-waterfall-chart.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { WinnersComponent } from './winners/winners.component';
+import { NewProductsComponent } from './new-products/new-products.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,9 @@ const routes: Routes = [
   },
   {
     path: 'winners', component: WinnersComponent
+  },
+  {
+    path: 'new-products', component: NewProductsComponent
   }
 ];
 

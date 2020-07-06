@@ -16,7 +16,7 @@ export interface IProduct {
 })
 export class WinnersComponent implements OnInit {
 
-  Top5Winners: IProduct[] = [
+  top5Winners: IProduct[] = [
     {
       id: 1,
       productName: 'Aviano Slim Brief',

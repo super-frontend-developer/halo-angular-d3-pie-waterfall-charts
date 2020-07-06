@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <div class="col-12">
+                <section class="new-entrants">
+                    <h3>New Entrants</h3>
+                    <div class="products-container">
+                        <div class="card" *ngFor="let product of newProducts">
+                            <div class="card-body text-center">
+                                <div class="text-left" style="width: 65%;">
+                                    <span class="product-name">{{product.productName}}</span>
+                                </div>
+                                <div class="product-detail">
+                                    <div class="text-left" style="position: relative; bottom: 10px;">
+                                        <div style="margin-bottom: -5px;"><span class="product-revenue">${{product.revenue}}</span></div>
+                                        <span>Revenue</span>
+                                    </div>
+                                    <img class="product-image" src="{{product.productImage}}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="exits">
+                    <h3>Exits</h3>
+                    <div class="products-container">
+                        <div class="card" *ngFor="let product of exitProducts">
+                            <div class="card-body text-center">
+                                <div class="text-left" style="width: 80%;">
+                                    <span class="product-name">{{product.productName}}</span>
+                                </div>
+                                <div class="product-detail">
+                                    <div class="text-left" style="position: relative; bottom: 10px;">
+                                        <div style="margin-bottom: -5px;"><span class="last-month-revenue">${{product.revenue}}</span></div>
+                                        <span>Last Month</span>
+                                        <span class="d-block">Revenue</span>
+                                    </div>
+                                    <img class="product-image" src="{{product.productImage}}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="d-flex align-items-center">
+            <img class="avatar" src="./assets/images/avatar.png"/>
+            <div class="pl-3 pr-3">
+                <div class="text-nowrap">William Carison</div>
+                <div class="position">Senior Analyst</div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="description">
+            <p class="m-0">Increase in marketing spend seems to increase the number of impressions in Luggage category but looks like it did not translate to revenue</p>
+        </div>
+    </div>
+</div>
+
+
+
