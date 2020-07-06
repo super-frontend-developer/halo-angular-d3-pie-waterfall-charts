@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { RevenuePieChartComponent } from './revenue-pie-chart/revenue-pie-chart.component';
 import { RevenueWaterfallChartComponent } from './revenue-waterfall-chart/revenue-waterfall-chart.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { WinnersComponent } from './winners/winners.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,9 @@ const routes: Routes = [
   },
   {
     path: 'categories', component: CategoriesComponent
+  },
+  {
+    path: 'winners', component: WinnersComponent
   }
 ];
 
