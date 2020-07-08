@@ -8,6 +8,7 @@ import { RevenueWaterfallChartComponent } from './revenue-waterfall-chart/revenu
 import { CategoriesComponent } from './categories/categories.component';
 import { WinnersComponent } from './winners/winners.component';
 import { NewProductsComponent } from './new-products/new-products.component';
+import { CollectionsComponent } from './collections/collections.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NewProductsComponent } from './new-products/new-products.component';
     RevenueWaterfallChartComponent,
     CategoriesComponent,
     WinnersComponent,
-    NewProductsComponent
+    NewProductsComponent,
+    CollectionsComponent
   ],
   imports: [
     BrowserModule,

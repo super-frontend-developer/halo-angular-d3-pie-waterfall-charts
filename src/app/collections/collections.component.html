@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <div class="col-12">
+                <section>
+                    <h3>Collections</h3>
+                    <div class="collections-container">
+                        <div class="card" *ngFor="let collection of collections">
+                            <div class="card-body text-center">
+                                <div style="position: relative;">
+                                    <div class="text-left mt-2">
+                                        <span class="collection-name">{{collection.collectionName}}</span>
+                                    </div>
+                                    <div class="collection-number"><span>{{collection.id}}</span></div>
+                                </div>
+                                
+                                
+                                <div class="collection-detail">
+                                    <div class="text-left">
+                                        <div style="margin-bottom: -5px;"><span class="collection-revenue">{{collection.totalRevenuePercent}}%</span></div>
+                                        <span>Revenue</span>
+                                    </div>
+                                    <div class="text-left">
+                                        <div style="margin-bottom: -5px;"><span class="collection-impressions" [ngClass]="{'text-danger': collection.totalImpressionsPercent < 0}">{{collection.totalImpressionsPercent}}%</span></div>
+                                        <span>Impressions</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="card">
+                        <div class="card-body d-block p-0">
+                            <table class="w-100">
+                                <thead>
+                                    <tr>
+                                        <th class="pl-5" colspan="2" rowspan="2">Collection Name</th>
+                                        <th colspan="2">February MTD</th>
+                                        <th colspan="2">January MTD</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Revenue</th> 
+                                        <th>Impressions</th> 
+                                        <th>Revenue</th> 
+                                        <th>Impressions</th> 
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let collection of collections"> 
+                                        <td style="padding-left: 30px;" colspan="2"><div class="pl-3"><span>{{collection.collectionName}}</span></div></td> 
+                                        <td><div style="padding-right: 55px;"><span>$ {{collection.februaryMTD.revenue}}</span></div></td> 
+                                        <td><div style="padding-right: 33px;"><span>{{collection.februaryMTD.impressions}}</span></div></td> 
+                                        <td><div style="padding-right: 55px;"><span>$ {{collection.januaryMTD.revenue}}</span></div></td> 
+                                        <td style="padding-right: 30px;"><div class="pr-3"><span>{{collection.januaryMTD.impressions}}</span></div></td> 
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="d-flex align-items-center">
+            <img class="avatar" src="./assets/images/avatar.png"/>
+            <div class="pl-3 pr-3">
+                <div class="text-nowrap">William Carison</div>
+                <div class="position">Senior Analyst</div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="description">
+            <p class="m-0">Increase in marketing spend seems to increase the number of impressions in Alpha Bravo and looks like it translated to revenue</p>
+        </div>
+    </div>
+</div>
+
+
+

@@ -5,6 +5,7 @@ import { RevenueWaterfallChartComponent } from './revenue-waterfall-chart/revenu
 import { CategoriesComponent } from './categories/categories.component';
 import { WinnersComponent } from './winners/winners.component';
 import { NewProductsComponent } from './new-products/new-products.component';
+import { CollectionsComponent } from './collections/collections.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,9 @@ const routes: Routes = [
   },
   {
     path: 'new-products', component: NewProductsComponent
+  },
+  {
+    path: 'collections', component: CollectionsComponent
   }
 ];
 
