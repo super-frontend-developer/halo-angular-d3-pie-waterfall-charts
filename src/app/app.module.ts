@@ -9,6 +9,8 @@ import { CategoriesComponent } from './categories/categories.component';
 import { WinnersComponent } from './winners/winners.component';
 import { NewProductsComponent } from './new-products/new-products.component';
 import { CollectionsComponent } from './collections/collections.component';
+import { ChannelWiseSessionsComponent } from './channel-wise-sessions/channel-wise-sessions.component';
+import { ChannelWiseRevenueComponent } from './channel-wise-revenue/channel-wise-revenue.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CollectionsComponent } from './collections/collections.component';
     CategoriesComponent,
     WinnersComponent,
     NewProductsComponent,
-    CollectionsComponent
+    CollectionsComponent,
+    ChannelWiseSessionsComponent,
+    ChannelWiseRevenueComponent
   ],
   imports: [
     BrowserModule,

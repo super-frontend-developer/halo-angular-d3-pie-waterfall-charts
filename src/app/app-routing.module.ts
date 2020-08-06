@@ -6,10 +6,12 @@ import { CategoriesComponent } from './categories/categories.component';
 import { WinnersComponent } from './winners/winners.component';
 import { NewProductsComponent } from './new-products/new-products.component';
 import { CollectionsComponent } from './collections/collections.component';
+import { ChannelWiseSessionsComponent } from './channel-wise-sessions/channel-wise-sessions.component';
+import { ChannelWiseRevenueComponent } from './channel-wise-revenue/channel-wise-revenue.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'revenue-pie-chart', pathMatch: 'full'
+    path: '', redirectTo: 'channel-wise-revenue', pathMatch: 'full'
   },
   {
     path: 'revenue-pie-chart', component: RevenuePieChartComponent
@@ -28,6 +30,12 @@ const routes: Routes = [
   },
   {
     path: 'collections', component: CollectionsComponent
+  },
+  {
+    path: 'channel-wise-sessions', component: ChannelWiseSessionsComponent
+  },
+  {
+    path: 'channel-wise-revenue', component: ChannelWiseRevenueComponent
   }
 ];
 
