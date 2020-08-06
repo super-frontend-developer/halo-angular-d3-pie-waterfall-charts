@@ -52,6 +52,12 @@
         border-radius: 50%;
     }
 
+    .conversion-rate  {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
     .session-card {
         position: relative;
         width: 120px;

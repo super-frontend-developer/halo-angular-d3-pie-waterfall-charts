@@ -14,12 +14,12 @@ export class ChannelWiseRevenueComponent implements OnInit {
   private padding: number;
 
   private dataSet = [
-    {name: 'session1', revenue: 110, transaction: 800, aov: 100},
-    {name: 'session2', revenue: 275, transaction: 710, aov: 400},
-    {name: 'session3', revenue: 125, transaction: 1000, aov: 200},
-    {name: 'session4', revenue: 175, transaction: 1100, aov: 220},
-    {name: 'session5', revenue: 210, transaction: 680, aov: 390},
-    {name: 'session6', revenue: 210, transaction: 700, aov: 350}
+    {name: 'session1', image: './assets/images/facebook.svg', revenue: 110, transaction: 800, aov: 100},
+    {name: 'session2', image: './assets/images/email.svg', revenue: 275, transaction: 710, aov: 400},
+    {name: 'session3', image: './assets/images/icon1.svg', revenue: 125, transaction: 1000, aov: 200},
+    {name: 'session4', image: './assets/images/linkedin.svg', revenue: 175, transaction: 1100, aov: 220},
+    {name: 'session5', image: './assets/images/icon2.svg', revenue: 210, transaction: 680, aov: 390},
+    {name: 'session6', image: './assets/images/twitter.svg', revenue: 210, transaction: 700, aov: 350}
   ];
 
   constructor() { }
@@ -61,7 +61,7 @@ export class ChannelWiseRevenueComponent implements OnInit {
       .append('g')
       .attr('transform', 'translate(' + (0) + ',' + (this.margin.top + this.margin.bottom) + ')');
 
-    x.domain(data.map((d) => d.name));
+    x.domain(data.map((d) => d.image));
     y.domain([0, d3.max(data, (d) => d.revenue)]);
     y1.domain([0, d3.max(data, (d) => d.transaction)]);
 
@@ -118,7 +118,7 @@ export class ChannelWiseRevenueComponent implements OnInit {
     bar.append('path')
       .style('fill', 'url(#gradient)')
       .attr('d', d => this.roundedRect(
-        x(d.name),
+        x(d.image),
         y(d.revenue),
         x.bandwidth(),
         y(0) - y(d.revenue),
@@ -128,7 +128,7 @@ export class ChannelWiseRevenueComponent implements OnInit {
     // transaction line chart
     const transactionLine = d3.line()
       .x((d, i) => {
-        return x(d.name) + x.bandwidth() / 2;
+        return x(d.image) + x.bandwidth() / 2;
       })
       .y((d) => {
         return y(d.transaction / 4);
@@ -142,7 +142,7 @@ export class ChannelWiseRevenueComponent implements OnInit {
     transactionCircle.enter().append('circle')
         .attr('class', 'transaction-dot')
         .attr('cx', (d, i) => {
-          return x(d.name) + x.bandwidth() / 2;
+          return x(d.image) + x.bandwidth() / 2;
         })
         .attr('cy', (d) => {
           return y(d.transaction / 4);
@@ -152,7 +152,7 @@ export class ChannelWiseRevenueComponent implements OnInit {
     // aov line chart
     const aovLine = d3.line()
       .x((d, i) => {
-        return x(d.name) + x.bandwidth() / 2;
+        return x(d.image) + x.bandwidth() / 2;
       })
       .y((d) => {
         return y(d.aov / 4);
@@ -166,7 +166,7 @@ export class ChannelWiseRevenueComponent implements OnInit {
     aovCircle.enter().append('circle')
         .attr('class', 'aov-dot')
         .attr('cx', (d, i) => {
-          return x(d.name) + x.bandwidth() / 2;
+          return x(d.image) + x.bandwidth() / 2;
         })
         .attr('cy', (d) => {
           return y(d.aov / 4);
@@ -175,15 +175,77 @@ export class ChannelWiseRevenueComponent implements OnInit {
 
     const chart1 = d3.select('.chart1')
       .style('width', '100%')
-      .attr('height', this.height + this.margin.top + this.margin.bottom + 50)
+      .attr('height', this.height + this.margin.top + this.margin.bottom + 100)
       .append('g')
       .attr('transform', 'translate(' + (this.margin.top + this.margin.bottom) + ',' + (this.margin.top + this.margin.bottom) + ')');
 
+
+    // legend part
+    chart1.append('path')
+      .style('fill', 'url(#gradient)')
+      .attr('d', d => this.roundedRect(
+        20,
+        -45,
+        29,
+        10,
+        [5, 5, 5, 5]
+      ));
+
+    chart1.append('text')
+    .attr('x', 60)
+    .attr('y', -40)
+    .text('Total Revenue')
+    .style('font-size', '14px')
+    .style('color', '#303539')
+    .style('font-weight', '600')
+    .attr('alignment-baseline', 'middle');
+
+    chart1.append('circle')
+    .attr('cx', this.width / 3 * 2)
+    .attr('cy', -40)
+    .attr('r', 4)
+    .attr('stroke', '#00CFFE')
+    .attr('stroke-width', 3)
+    .style('fill', '#E3EAF4');
+
+    chart1.append('text')
+    .attr('x', this.width / 3 * 2 + 20)
+    .attr('y', -40)
+    .text('AOV')
+    .style('font-size', '14px')
+    .style('color', '#303539')
+    .style('font-weight', '600')
+    .attr('alignment-baseline', 'middle');
+
+    chart1.append('circle')
+    .attr('cx', this.width / 3 + 20)
+    .attr('cy', -40)
+    .attr('r', 4)
+    .attr('stroke', '#FD9863')
+    .attr('stroke-width', 3)
+    .style('fill', '#E3EAF4');
+
+    chart1.append('text')
+    .attr('x', this.width / 3 + 40)
+    .attr('y', -40)
+    .text('Transactions')
+    .style('font-size', '14px')
+    .style('color', '#303539')
+    .style('font-weight', '600')
+    .attr('alignment-baseline', 'middle');
+
     chart1.append('g')
       .attr('class', 'x axis')
-      .attr('transform', 'translate(0,' + this.height + ')')
-      .attr('display', 'none')
-      .call(xAxis);
+      .attr('transform', 'translate(0,' + (this.height + 20) + ')')
+      .call(xAxis)
+      .selectAll('.tick')
+      .data(data)
+      .append('image')
+      .attr('xlink:href', (d) => d.image)
+      .attr('width', 41)
+      .attr('height', 41)
+      .attr('x', -16)
+      .attr('y', 40);
 
     chart1.append('g')
       .attr('class', 'y axis')

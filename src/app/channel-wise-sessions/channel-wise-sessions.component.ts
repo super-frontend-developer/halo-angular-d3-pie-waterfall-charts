@@ -17,13 +17,13 @@ export class ChannelWiseSessionsComponent implements AfterViewInit {
   private radius: number;
   private htmlElement: HTMLElement;
 
-  private pieData = [
-    {name: 'linkedin', percentage: 32.6, color: '#6BFCAF'},
-    {name: 'twitter', percentage: 2.2, color: '#FAFF67'},
-    {name: 'google', percentage: 2.4, color: '#FD9863'},
-    {name: 'mysite', percentage: 15.1, color: '#B763FD'},
-    {name: 'facebook', percentage: 19.8, color: '#FB71D0'},
-    {name: 'email', percentage: 27.9, color: '#00CFFE'}
+  pieData = [
+    {name: 'Linked IN', percentage: 32.6, color: '#6BFCAF', image: './assets/images/linkedin.svg'},
+    {name: 'Twitter', percentage: 2.2, color: '#FAFF67', image: './assets/images/twitter.svg'},
+    {name: 'Google +', percentage: 2.4, color: '#FD9863', image: './assets/images/google.svg'},
+    {name: 'My Site', percentage: 15.1, color: '#B763FD', image: './assets/images/mysite.svg'},
+    {name: 'Facebook', percentage: 19.8, color: '#FB71D0', image: './assets/images/facebook.svg'},
+    {name: 'Email', percentage: 27.9, color: '#00CFFE', image: './assets/images/email.svg'}
   ];
 
   totalRevenue = '2,739k';

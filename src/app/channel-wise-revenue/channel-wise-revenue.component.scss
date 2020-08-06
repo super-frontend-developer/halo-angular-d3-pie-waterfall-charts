@@ -45,34 +45,6 @@
         opacity: 1;
     }
 
-    .legend {
-        position: relative;
-        top: 15px;
-
-        .revenue {
-            width: 29px;
-            height: 10px;
-            background: transparent linear-gradient(180deg, #6AA0F1 0%, #1364DC 100%) 0% 0% no-repeat padding-box;
-            border-radius: 10px;
-        }
-
-        .transactions {
-            width: 10px;
-            height: 10px;
-            background: #E3EAF4 0% 0% no-repeat padding-box;
-            border: 3px solid #FD9863;
-            border-radius: 50%;
-        }
-
-        .aov {
-            width: 10px;
-            height: 10px;
-            background: #E3EAF4 0% 0% no-repeat padding-box;
-            border: 3px solid #00CFFE;
-            border-radius: 50%;
-        }
-    }
-
     .channel-group {
         width: 513px;
         padding: 0 20px;
@@ -116,5 +88,11 @@
 
     .axis path {
         stroke: none;
+    }
+
+    .axis.x {
+        text {
+            display: none;
+        }
     }
 }
