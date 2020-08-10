@@ -1,0 +1,199 @@
+:host ::ng-deep {
+    * {
+      font-family: 'Poppins';
+    }
+
+    .container {
+        width: 428px;
+
+        .content {
+            padding: 24px 10px;
+        }
+    }
+
+    .revenue-section {
+        width: 371px;
+    }
+
+    .units-sold-section {
+        width: 338px; 
+
+        margin-bottom: 20px;
+    }
+
+    .transaction-section {
+        width: 300px; 
+        height: 150px;
+
+        margin-bottom: 20px;
+    }
+
+    .upt-section {
+        width: 300px; 
+        height: 150px;
+    }
+
+    .aur-section {
+        width: 338px; 
+        height: 150px;
+
+        .aur-section-content {
+            display: flex;
+            justify-content: center;
+
+            margin-top: 1.5rem;
+
+            div:first-child {
+                margin-left: 1.5rem;
+            }
+        }
+    }
+
+    h4 {
+        color: #303539;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    span {
+        display: block;
+        color: #535353;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .percent-value {
+        font-size: 15px;
+        font-weight: normal;
+
+        &--up {
+            color: #2B9554;
+        }
+
+        &--down {
+            color: #BD3535;
+        }
+    }
+    
+    .card {
+        border: 0;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 15px #00000029;
+        border-radius: 15px;
+        opacity: 1;
+    }
+
+    .arrow-bottom-icon {
+        position: relative;
+        width: 17px;
+        height: 17px;
+        bottom: 7px;
+        box-sizing: border-box;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 10px #FF5858;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .arrow-bottom-icon::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 0px;
+        left: -10.4px;
+        top: 16px;
+        box-sizing: border-box;
+        
+        border: 13px solid #FFFFFF;
+        border-color: transparent transparent #FFFFFF #FFFFFF;
+        
+        transform-origin: 0 0;
+        transform: rotate(-45deg);
+        
+        box-shadow: -3px 3px 3px 0 rgba(255, 88, 88, 0.5);
+        border-radius: 5px;
+    }
+
+    .arrow-top-icon {
+        position: relative;
+        top: 12px;
+        width: 17px;
+        height: 17px;
+        box-sizing: border-box;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 10px #39BF61;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .arrow-top-icon::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 0px;
+        left: 27px;
+        top: 1px;
+        box-sizing: border-box;
+        border: 13px solid #FFFFFF;
+        border-color: transparent transparent #FFFFFF #FFFFFF;
+        transform-origin: 0 0;
+        transform: rotate(-225deg);
+        box-shadow: -3px 3px 3px 0 rgba(57, 191, 97, 0.5);
+        border-radius: 5px;
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            width: 680px;
+            height: 510px;
+    
+            .content {
+                padding: 24px 10px;
+            }
+        }
+
+        .revenue-section {
+            width: 629px; 
+            height: 420px;
+
+            .revenue-section-content {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .units-sold-section {
+            width: 449px; 
+            height: 297px;
+
+            .units-sold-section-content {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .transaction-section {
+            width: 210px; 
+            height: 170px;
+        }
+
+        .upt-section {
+            width: 191px; 
+            height: 170px;
+        }
+
+        .aur-section {
+            width: 132px; 
+            height: 297px;
+
+            .aur-section-content {
+                display: block;
+                margin-top: 54px;
+
+                span:first-child {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
