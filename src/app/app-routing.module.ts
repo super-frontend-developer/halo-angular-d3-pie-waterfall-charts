@@ -9,10 +9,11 @@ import { CollectionsComponent } from './collections/collections.component';
 import { ChannelWiseSessionsComponent } from './channel-wise-sessions/channel-wise-sessions.component';
 import { ChannelWiseRevenueComponent } from './channel-wise-revenue/channel-wise-revenue.component';
 import { OrdersSummaryComponent } from './orders-summary/orders-summary.component';
+import { RevenueOrderStatusComponent } from './revenue-order-status/revenue-order-status.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'orders-summary', pathMatch: 'full'
+    path: '', redirectTo: 'revenue-order-status', pathMatch: 'full'
   },
   {
     path: 'revenue-pie-chart', component: RevenuePieChartComponent
@@ -40,6 +41,9 @@ const routes: Routes = [
   },
   {
     path: 'orders-summary', component: OrdersSummaryComponent
+  },
+  {
+    path: 'revenue-order-status', component: RevenueOrderStatusComponent
   }
 ];
 

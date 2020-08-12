@@ -12,6 +12,7 @@ import { CollectionsComponent } from './collections/collections.component';
 import { ChannelWiseSessionsComponent } from './channel-wise-sessions/channel-wise-sessions.component';
 import { ChannelWiseRevenueComponent } from './channel-wise-revenue/channel-wise-revenue.component';
 import { OrdersSummaryComponent } from './orders-summary/orders-summary.component';
+import { RevenueOrderStatusComponent } from './revenue-order-status/revenue-order-status.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { OrdersSummaryComponent } from './orders-summary/orders-summary.componen
     CollectionsComponent,
     ChannelWiseSessionsComponent,
     ChannelWiseRevenueComponent,
-    OrdersSummaryComponent
+    OrdersSummaryComponent,
+    RevenueOrderStatusComponent
   ],
   imports: [
     BrowserModule,

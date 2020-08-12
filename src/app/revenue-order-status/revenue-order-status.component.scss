@@ -1,0 +1,341 @@
+:host ::ng-deep {
+    * {
+      font-family: 'Poppins';
+    }
+
+    .container {
+        width: 428px;
+
+        .content {
+            padding: 24px 10px;
+        }
+    }
+
+    h4 {
+        color: #303539;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    span {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    p {
+        width: 235px;
+        height: 31px;
+        font-size: 10px;
+        color: #8D8D8D;
+    }
+
+    .header {
+        margin-bottom: 30px;
+    }
+
+    .columns {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 30px;
+
+        .column-name {
+            color: #9C9C9C;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .column-name:nth-child(2) {
+            padding-right: 20px;
+        }
+        .column-name:last-child {
+            padding-right: 10px;
+        }
+    }
+
+    .realized-revenue {
+        position: relative;
+
+        margin-bottom: 33px;
+
+        .section-title {
+            position: absolute;
+            left: -27px;
+            top: 83px;
+            font-size: 16px;
+            transform: rotate(270deg);
+        }
+
+        .realized-revenue-content {
+            position: relative;
+            left: 10px;
+            padding-left: 20px;
+        }
+    }
+
+    .lost-revenue {
+        position: relative;
+        
+        .section-title {
+            position: absolute;
+            left: -8px;
+            top: 125px;
+            font-size: 16px;
+            transform: rotate(270deg);
+        }
+
+        .lost-revenue-content {
+            position: relative;
+            left: 10px;
+            padding-left: 20px;
+        }
+    }
+
+    .percent-value {
+        display: flex;
+        font-size: 15px;
+        font-weight: normal;
+        margin-top: 20px;
+
+        &--up {
+            color: #2B9554;
+        }
+
+        &--down {
+            color: #BD3535;
+        }
+    }
+    
+    .card {
+        border: 0;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 15px;
+        opacity: 1;
+    }
+
+    .realized-card {
+        box-shadow: 0px 0px 15px #53C880;
+
+        .delivered {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .lost-card {
+        box-shadow: 0px 0px 15px #FF87879C;
+
+        .failed {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cancelled {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .returned {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .progress {
+        height: 15px;
+        border-radius: 22px;
+        width: 100%;
+        background-color: #ffffff;
+      
+        .progress-bar {
+          border-top-right-radius: 22px;
+          border-bottom-right-radius: 22px;
+          background: #6EC9FE 0% 0% no-repeat padding-box;
+        }
+    }
+
+    .arrow-bottom-icon {
+        position: relative;
+        width: 10px;
+        height: 10px;
+        bottom: 4px;
+        box-sizing: border-box;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 10px #FF5858;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+    .arrow-bottom-icon::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 0px;
+        left: -8px;
+        top: 9px;
+        box-sizing: border-box;
+        
+        border: 9px solid #FFFFFF;
+        border-color: transparent transparent #FFFFFF #FFFFFF;
+        
+        transform-origin: 0 0;
+        transform: rotate(-45deg);
+        
+        box-shadow: -3px 3px 3px 0 rgba(255, 88, 88, 0.5);
+        border-radius: 5px;
+    }
+
+    .arrow-top-icon {
+        position: relative;
+        top: 8px;
+        width: 10px;
+        height: 10px;
+        box-sizing: border-box;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 10px #39BF61;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    .arrow-top-icon::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 0px;
+        left: 18px;
+        top: 1px;
+        box-sizing: border-box;
+        border: 9px solid #FFFFFF;
+        border-color: transparent transparent #FFFFFF #FFFFFF;
+        transform-origin: 0 0;
+        transform: rotate(-225deg);
+        box-shadow: -3px 3px 3px 0 rgba(57, 191, 97, 0.5);
+        border-radius: 5px;
+    }
+
+    .empty-status {
+        width: 15px;
+        height: 11px;
+
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 5px #D6C805;
+        border-radius: 3px;
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            width: 680px;
+            height: 510px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+
+            margin-bottom: 0;
+        }
+
+        .card-body {
+            padding-right: 34px;
+        }
+
+        .columns {
+            display: grid;
+            grid-template-columns: 245px 1fr 1fr;
+            width: 100%;
+
+            .column-name:nth-child(2) {
+                text-align: right;
+            }
+            .column-name:last-child {
+                text-align: right;
+                padding-right: 10px;
+            }
+        }
+
+        .realized-revenue {
+            display: flex;
+            justify-content: flex-end;
+    
+            margin-bottom: 33px;
+
+            .section-title {
+                left: -7px;
+                top: 75px;
+            }
+
+            .realized-revenue-content {
+                left: 0;
+                padding-left: 0;
+            }
+        }
+    
+        .lost-revenue {
+            display: flex;
+            justify-content: flex-end;
+
+            .section-title {
+                left: 10px;
+                top: 110px;
+            }
+
+            .lost-revenue-content {
+                position: relative;
+                left: 0;
+                padding-left: 0;
+            }
+        }
+
+        .realized-card {
+            width: 576px;
+            height: 94px;
+
+            .delivered {
+                display: grid;
+                grid-template-columns: 245px 1fr 1fr;
+            }
+        }
+
+        .lost-card {
+            width: 576px;
+            height: 245px;
+
+            .failed {
+                display: grid;
+                grid-template-columns: 245px 1fr 1fr;
+            }
+
+            .cancelled {
+                display: grid;
+                grid-template-columns: 245px 1fr 1fr;
+            }
+
+            .returned {
+                display: grid;
+                grid-template-columns: 245px 1fr 1fr;
+            }
+
+        }
+
+        .units-ordered {
+            div:first-child {
+                width: 200px;
+                display: grid;
+                grid-template-columns: 90px 1fr 1fr;
+            }
+        }
+
+        .revenue {
+            text-align: right;
+        }
+
+        .aur {
+            text-align: right;
+        }
+
+        .percent-value {
+            justify-content: flex-end;
+            margin-top: 5px;
+        }
+    }
+}
