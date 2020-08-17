@@ -10,10 +10,12 @@ import { ChannelWiseSessionsComponent } from './channel-wise-sessions/channel-wi
 import { ChannelWiseRevenueComponent } from './channel-wise-revenue/channel-wise-revenue.component';
 import { OrdersSummaryComponent } from './orders-summary/orders-summary.component';
 import { RevenueOrderStatusComponent } from './revenue-order-status/revenue-order-status.component';
+import { DeliveredOrderStatusComponent } from './delivered-order-status/delivered-order-status.component';
+import { DeliveredOrderStatusChartsComponent } from './delivered-order-status-charts/delivered-order-status-charts.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'revenue-order-status', pathMatch: 'full'
+    path: '', redirectTo: 'delivered-order-status', pathMatch: 'full'
   },
   {
     path: 'revenue-pie-chart', component: RevenuePieChartComponent
@@ -44,6 +46,12 @@ const routes: Routes = [
   },
   {
     path: 'revenue-order-status', component: RevenueOrderStatusComponent
+  },
+  {
+    path: 'delivered-order-status', component: DeliveredOrderStatusComponent
+  },
+  {
+    path: 'delivered-order-status-charts', component: DeliveredOrderStatusChartsComponent
   }
 ];
 

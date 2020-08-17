@@ -13,6 +13,8 @@ import { ChannelWiseSessionsComponent } from './channel-wise-sessions/channel-wi
 import { ChannelWiseRevenueComponent } from './channel-wise-revenue/channel-wise-revenue.component';
 import { OrdersSummaryComponent } from './orders-summary/orders-summary.component';
 import { RevenueOrderStatusComponent } from './revenue-order-status/revenue-order-status.component';
+import { DeliveredOrderStatusComponent } from './delivered-order-status/delivered-order-status.component';
+import { DeliveredOrderStatusChartsComponent } from './delivered-order-status-charts/delivered-order-status-charts.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { RevenueOrderStatusComponent } from './revenue-order-status/revenue-orde
     ChannelWiseSessionsComponent,
     ChannelWiseRevenueComponent,
     OrdersSummaryComponent,
-    RevenueOrderStatusComponent
+    RevenueOrderStatusComponent,
+    DeliveredOrderStatusComponent,
+    DeliveredOrderStatusChartsComponent
   ],
   imports: [
     BrowserModule,
