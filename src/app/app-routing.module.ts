@@ -15,7 +15,7 @@ import { DeliveredOrderStatusChartsComponent } from './delivered-order-status-ch
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'delivered-order-status', pathMatch: 'full'
+    path: '', redirectTo: 'delivered-order-status-charts', pathMatch: 'full'
   },
   {
     path: 'revenue-pie-chart', component: RevenuePieChartComponent

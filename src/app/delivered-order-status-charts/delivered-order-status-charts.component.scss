@@ -1,0 +1,130 @@
+:host ::ng-deep {
+    * {
+      font-family: 'Poppins';
+    }
+
+    .container {
+        width: 428px;
+
+        .content {
+            padding: 24px 10px;
+        }
+    }
+
+    .header {
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        color: #A8A8A8;
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+
+    h4 {
+        color: #303539;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+
+    span {
+        color: #303539;
+        font-size: 14px;
+    }
+
+    p {
+        width: 118px;
+        margin-bottom: 0;
+        color: #8D8D8D;
+        font-size: 10px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .order-type__section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .order-type {
+        width: 15px;
+        height: 15px;
+        border-radius: 6px;
+    }
+
+    .card-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 379px;
+        height: 297px;
+        padding: 22px;
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px #00000029;
+    }
+
+    .chart-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            width: 680px;
+            height: 510px;
+
+            .content {
+                padding: 24px 10px;
+            }
+        }
+
+        p {
+            width: 100%;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            span {
+                margin-left: 10px;
+            }
+        }
+
+        .order-type__section {
+            justify-content: center;
+
+            .equal {
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+        }
+
+        .order-status__content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-box {
+            width: 294px;
+            height: 380px;
+            padding: 0px 26px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        .chart-content {
+            flex-direction: column;
+        }
+
+        .pie-chart {
+            position: relative;
+            margin-bottom: 45px;
+        }
+    }
+}
