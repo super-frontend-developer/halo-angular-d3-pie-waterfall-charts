@@ -15,6 +15,7 @@ import { OrdersSummaryComponent } from './orders-summary/orders-summary.componen
 import { RevenueOrderStatusComponent } from './revenue-order-status/revenue-order-status.component';
 import { DeliveredOrderStatusComponent } from './delivered-order-status/delivered-order-status.component';
 import { DeliveredOrderStatusChartsComponent } from './delivered-order-status-charts/delivered-order-status-charts.component';
+import { ShippingLocationComponent } from './shipping-location/shipping-location.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DeliveredOrderStatusChartsComponent } from './delivered-order-status-ch
     OrdersSummaryComponent,
     RevenueOrderStatusComponent,
     DeliveredOrderStatusComponent,
-    DeliveredOrderStatusChartsComponent
+    DeliveredOrderStatusChartsComponent,
+    ShippingLocationComponent
   ],
   imports: [
     BrowserModule,

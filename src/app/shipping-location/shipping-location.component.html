@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="content">
+        <div class="header">
+            <h4 class="mb-4">Successful Orders by Shipping Location</h4>
+        </div>
+
+        <div class="shipping-location__content">
+            <div class="card-box location-map">
+                <div id="chart"></div>
+                <div class="d-flex flex-column align-items-center">
+                    <span class="mb-1" style="font-size: 12px; color: #B4B4B4;">Orders delivered</span>
+                    <div class="color-range">
+                        <span style="font-size: 12px; color: #FFFFFF;">12</span>
+                        <span style="font-size: 12px; color: #1D9A50;">6</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-box location-detail">
+                <div class="text-center">
+                    <h5>Top 5 Locations</h5>
+                    <span style="font-size: 12px; color: #B4B4B4;">Delivered orders</span>
+                </div>
+                <div class="d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between" *ngFor="let location of deliveredLocations">
+                        <span>{{location.name}}</span>
+                        <div class="d-flex">
+                            <span class="mr-3">{{location.value}}</span>
+                            <div class="percent-value">
+                                <span class="mr-3" [ngClass]="{'percent-value--up': location.isIncrease, 'percent-value--down': !location.isIncrease}">{{location.percentage}}%</span>
+                                <div [ngClass]="{'arrow-top-icon': location.isIncrease, 'arrow-bottom-icon': !location.isIncrease}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

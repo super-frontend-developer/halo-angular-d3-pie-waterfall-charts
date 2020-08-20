@@ -12,10 +12,11 @@ import { OrdersSummaryComponent } from './orders-summary/orders-summary.componen
 import { RevenueOrderStatusComponent } from './revenue-order-status/revenue-order-status.component';
 import { DeliveredOrderStatusComponent } from './delivered-order-status/delivered-order-status.component';
 import { DeliveredOrderStatusChartsComponent } from './delivered-order-status-charts/delivered-order-status-charts.component';
+import { ShippingLocationComponent } from './shipping-location/shipping-location.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'delivered-order-status-charts', pathMatch: 'full'
+    path: '', redirectTo: 'shipping-location', pathMatch: 'full'
   },
   {
     path: 'revenue-pie-chart', component: RevenuePieChartComponent
@@ -52,6 +53,9 @@ const routes: Routes = [
   },
   {
     path: 'delivered-order-status-charts', component: DeliveredOrderStatusChartsComponent
+  },
+  {
+    path: 'shipping-location', component: ShippingLocationComponent
   }
 ];
 
